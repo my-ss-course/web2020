@@ -1,0 +1,9 @@
+.idea
+composer.lock
+*.log
+thinkphp
+*/.DS_Storegit
+.user.ini
+.well-known/*
+.htaccess
+
