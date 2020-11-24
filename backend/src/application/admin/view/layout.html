@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宿舍管理系统后台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="__STATIC__/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="__STATIC__/css/font.css">
+    <link rel="stylesheet" href="__STATIC__/css/xadmin.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+    <script src="__STATIC__/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="__STATIC__/js/xadmin.js"></script>
+
+</head>
+<body>
+<!-- 顶部开始 -->
+<div class="container">
+    <div class="logo"><a href="{:url('@admin/index/index')}">软微学院宿舍管理系统后台</a></div>
+    <div class="open-nav"><i class="iconfont">&#xe699;</i></div>
+    <ul class="layui-nav right" lay-filter="">
+        <li class="layui-nav-item">
+            <a href="javascript:;">{:session('user_name')}</a>
+            <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                <dd><a href="">个人信息</a></dd>
+                <dd><a href="{:url('@admin/login/logout')}">退出</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="{:url('@admin/index/index')}">后台首页</a></li>
+    </ul>
+</div>
+<!-- 顶部结束 -->
+<!-- 中部开始 -->
+<div class="wrapper">
+    <!-- 左侧菜单开始 -->
+    <div class="left-nav">
+        <div id="side-nav">
+            {:action('Menu/index','','widget')}
+        </div>
+
+    </div>
+    <!-- 左侧菜单结束 -->
+    <!-- 右侧主体开始 -->
+    <div class="page-content">
+        <div class="content">
+            {__CONTENT__}
+        </div>
+    </div>
+    <!-- 右侧主体结束 -->
+</div>
+<!-- 中部结束 -->
+<!-- 底部开始 -->
+<div class="footer">
+    <div class="copyright">Copyright ©2017 x-admin v2.3 All Rights Reserved. 本后台系统由X前端框架提供前端技术支持</div>
+</div>
+<!-- 底部结束 -->
+<!-- 背景切换开始 -->
+<div class="bg-changer">
+    <div class="swiper-container changer-list">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img class="item" src="__STATIC__/images/a.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="item" src="__STATIC__/images/b.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="item" src="__STATIC__/images/c.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="item" src="__STATIC__/images/d.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="item" src="__STATIC__/images/e.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="item" src="__STATIC__/images/f.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="item" src="__STATIC__/images/g.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="item" src="__STATIC__/images/h.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="item" src="__STATIC__/images/i.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="item" src="__STATIC__/images/j.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="item" src="__STATIC__/images/k.jpg" alt=""></div>
+            <div class="swiper-slide"><span class="reset">初始化</span></div>
+        </div>
+    </div>
+    <div class="bg-out"></div>
+    <div id="changer-set"><i class="iconfont">&#xe696;</i></div>
+</div>
+<!-- 背景切换结束 -->
+
+</body>
+</html>
