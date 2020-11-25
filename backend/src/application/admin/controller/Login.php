@@ -2,7 +2,6 @@
 namespace app\admin\controller;
 
 use think\Controller;
-use app\admin\model\admin;
 
 class Login extends Controller
 {
@@ -32,7 +31,7 @@ class Login extends Controller
             $this->error('密码不能为空');
         }
 
-        $admin = new Admin;
+        $admin = model('Admin');
         $info = $admin->getInfoByUsername($username);
 
         if (!$info) {
